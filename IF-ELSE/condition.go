@@ -45,24 +45,40 @@ func main() {
     // fmt.Println(i)
     // }
 
-	day := 2
+	// day := 2
 
-	switch day {
-	case 1:
-		fmt.Println("Monday")
-	case 2:
-		fmt.Println("Tuesday")
-	case 3:
-		fmt.Println("Wednesday")
-	case 4:
-		fmt.Println("thrusday")
-	case 5:
-		fmt.Println("friday")
-	case 6:
-		fmt.Println("saturday")
-	case 7: 
-		fmt.Println("sunday")			
-	default:
-		fmt.Println("Invalid day")
+	// switch day {
+	// case 1:
+	// 	fmt.Println("Monday")
+	// case 2:
+	// 	fmt.Println("Tuesday")
+	// case 3:
+	// 	fmt.Println("Wednesday")
+	// case 4:
+	// 	fmt.Println("thrusday")
+	// case 5:
+	// 	fmt.Println("friday")
+	// case 6:
+	// 	fmt.Println("saturday")
+	// case 7: 
+	// 	fmt.Println("sunday")			
+	// default:
+	// 	fmt.Println("Invalid day")
+	// }
+	
+	WhoAmI := func(i interface{}){
+		switch t := i.(type){
+
+	case string:
+		fmt.Println("it is a string",t)
+
+	case int:
+		fmt.Println("it is an integer",t)	
+
+	case bool:
+		fmt.Println("it is a boolean",t)	
+	   }
 	}
+
+	WhoAmI(80000)
 }
